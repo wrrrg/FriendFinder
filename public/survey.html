@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <title>How about for survey?</title>
+  </head>
+  <body>
+
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <p class="title"> FriendFinder </p>
+              <p class="subtitle"> Find you a friend! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="content container">
+
+
+      <h1 class="title">Survey!</h1>
+
+      <div class="field">
+        <p class="subtitle">What is your name?</p>
+        <div class="control">
+          <input class="input is-primary" type="text" placeholder="ex. John Doe" id="friend-name">
+        </div>
+
+        <p class="subtitle">Please enter a valid url to a photo of you: </p>
+        <div class="control">
+          <input class="input is-primary" type="text" placeholder="enter url here" id="photo-url">
+        </div>
+
+      </div>
+
+      <div class="field">
+          <!-- individual questions -->
+        <div class="control">
+
+          <p class="subtitle">How do you feel about this CSS Framework?</p>
+          <div class="select is-primary">
+            <select name="question1" id="q1">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="control">
+          <p class="subtitle">How about now?</p>
+          <div class="select is-primary">
+            <select name="question2" id="q2">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="control">
+          <p class="subtitle">Or now?</p>
+          <div class="select is-primary">
+            <select name="question3" id="q3">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="control">
+          <p class="subtitle">What about now?</p>
+          <div class="select is-primary">
+            <select name="question4" id="q4">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+
+        <input class="button is-dark" type="submit" name="" value="Submit Survey" id="submit">
+
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
+
+<script type="text/javascript">
+  $("#submit").on("click", function(event) {
+    event.preventDefault();
+
+    var newFriend = {
+      name: $("#friend-name").val().trim(),
+      pictureUrl: $("#photo-url").val().trim(),
+      q1: parseInt($("#q1").val()),
+      q2: parseInt($("#q2").val()),
+      q3: parseInt($("#q3").val()),
+      q4: parseInt($("#q4").val())
+    };
+    console.log(newFriend);
+
+    // ajax stuff
+    $.post("/api/friends", newFriend, function(data) {
+      console.log(data)
+    });
+
+  });
+</script>

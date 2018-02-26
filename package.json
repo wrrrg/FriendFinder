@@ -1,0 +1,27 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "express/node app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrrrg/FriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrrrg/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/wrrrg/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bulma": "^0.6.2",
+    "bulma-start": "0.0.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
