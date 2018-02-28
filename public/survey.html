@@ -32,6 +32,7 @@
         <div class="control">
           <input class="input is-primary" type="text" placeholder="ex. John Doe" id="friend-name">
         </div>
+        <br>
 
         <p class="subtitle">Please enter a valid url to a photo of you: </p>
         <div class="control">
@@ -44,7 +45,7 @@
           <!-- individual questions -->
         <div class="control">
 
-          <p class="subtitle">How do you feel about this CSS Framework?</p>
+          <p class="subtitle">How do you feel about pineapple as a pizza topping?</p>
           <div class="select is-primary">
             <select name="question1" id="q1">
               <option value="1">1 (Strongly Disagree)</option>
@@ -55,9 +56,10 @@
             </select>
           </div>
         </div>
+        </br>
 
         <div class="control">
-          <p class="subtitle">How about now?</p>
+          <p class="subtitle">Chips and salsa should be complimentary always.</p>
           <div class="select is-primary">
             <select name="question2" id="q2">
               <option value="1">1 (Strongly Disagree)</option>
@@ -68,9 +70,10 @@
             </select>
           </div>
         </div>
+        <br>
 
         <div class="control">
-          <p class="subtitle">Or now?</p>
+          <p class="subtitle">If it's well done, it isn't steak.</p>
           <div class="select is-primary">
             <select name="question3" id="q3">
               <option value="1">1 (Strongly Disagree)</option>
@@ -81,9 +84,10 @@
             </select>
           </div>
         </div>
+        <br>
 
         <div class="control">
-          <p class="subtitle">What about now?</p>
+          <p class="subtitle">Propane is a superior grilling element to charcoal.</p>
           <div class="select is-primary">
             <select name="question4" id="q4">
               <option value="1">1 (Strongly Disagree)</option>
@@ -94,35 +98,127 @@
             </select>
           </div>
         </div>
+        <br>
+
+        <div class="control">
+          <p class="subtitle">In n Out is really not as bad as everyone acts like it is in Texas.</p>
+          <div class="select is-primary">
+            <select name="question4" id="q5">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <br>
+
+        <div class="control">
+          <p class="subtitle">A boiled egg offers me some comfort during particularly trying times.</p>
+          <div class="select is-primary">
+            <select name="question4" id="q6">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <br>
+
+        <div class="control">
+          <p class="subtitle">Vegetarian chroizo is a unforgivable contradiction of terms.</p>
+          <div class="select is-primary">
+            <select name="question4" id="q7">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <br>
+
+        <div class="control">
+          <p class="subtitle">Despite how horrible it was to hear, Ted Cruz wasn't entirely wrong about what he said about queso.</p>
+          <div class="select is-primary">
+            <select name="question4" id="q8">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <br>
+
+        <div class="control">
+          <p class="subtitle">I unfortunately find Texas wines lacking in many ways.</p>
+          <div class="select is-primary">
+            <select name="question4" id="q9">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <br>
+
+        <div class="control">
+          <p class="subtitle">Lonestar is a perfectly acceptable beer for almost any occasion.</p>
+          <div class="select is-primary">
+            <select name="question4" id="q10">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+        </div>
+        <br>
 
         <input class="button is-dark" type="submit" name="" value="Submit Survey" id="submit">
 
       </div>
 
     </div>
+    <script type="text/javascript">
+      $("#submit").on("click", function(event) {
+        event.preventDefault();
+
+        var newFriend = {
+          name: $("#friend-name").val().trim(),
+          photoUrl: $("#photo-url").val().trim(),
+          scores: [
+          ($("#q1").val()),
+          ($("#q2").val()),
+          ($("#q3").val()),
+          ($("#q4").val()),
+          ($("#q5").val()),
+          ($("#q6").val()),
+          ($("#q7").val()),
+          ($("#q8").val()),
+          ($("#q9").val()),
+          ($("#q10").val())
+          ]
+        };
+        console.log(newFriend);
+
+        // ajax stuff
+        $.post("/api/friends", newFriend, function(data) {
+          console.log(data)
+        });
+
+      });
+    </script>
 
 
   </body>
 </html>
-
-<script type="text/javascript">
-  $("#submit").on("click", function(event) {
-    event.preventDefault();
-
-    var newFriend = {
-      name: $("#friend-name").val().trim(),
-      pictureUrl: $("#photo-url").val().trim(),
-      q1: parseInt($("#q1").val()),
-      q2: parseInt($("#q2").val()),
-      q3: parseInt($("#q3").val()),
-      q4: parseInt($("#q4").val())
-    };
-    console.log(newFriend);
-
-    // ajax stuff
-    $.post("/api/friends", newFriend, function(data) {
-      console.log(data)
-    });
-
-  });
-</script>

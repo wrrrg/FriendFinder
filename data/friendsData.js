@@ -1,11 +1,53 @@
 var friendsArray = [
   {
     name: "Bill",
-    pictureUrl: "https://www.google.com",
-    q1: 4,
-    q2: 3,
-    q3: 2,
-    q4: 3
+    photo: "https://www.google.com",
+    scores: [
+      4,
+      3,
+      2,
+      3,
+      2,
+      5,
+      5,
+      4,
+      3,
+      5
+    ]
+  },
+
+  {
+    name: "Bob",
+    photo: "https://www.google.com",
+    scores: [
+      1,
+      4,
+      3,
+      2,
+      1,
+      1,
+      4,
+      1,
+      2,
+      3
+    ]
+  },
+
+  {
+    name: "Randy",
+    photo: "https://www.google.com",
+    scores: [
+      5,
+      4,
+      5,
+      5,
+      4,
+      3,
+      4,
+      5,
+      3,
+      5
+    ]
   }
 ];
 
