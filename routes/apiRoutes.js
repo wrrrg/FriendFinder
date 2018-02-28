@@ -22,8 +22,8 @@ module.exports = function(app) {
     friendsData.push(newestFriend);
     console.log("You hit the post route at least");
     // logs in our console and in the browser console, for now at least
-    console.log(friendsData);
-    res.json(friendsData)
+    // console.log(friendsData);
+
 
     //  logic for sorting friends data and finding a match
     var users = friendsData;
@@ -61,8 +61,16 @@ module.exports = function(app) {
       console.log("The difference between " + friend["name"] + " and " + testMatch["name"] + " is " + totalDiff);
       console.log("The new lowest score is: " + bestMatchScore);
       console.log("The new best match is: " + bestMatch["name"]);
+      console.log("*********************************************");
+
+
+
 
     };
+
+
+
+    res.json(bestMatch);
 
   });
 

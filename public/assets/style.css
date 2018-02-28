@@ -3,3 +3,13 @@
   margin: 0 auto;
   margin-top: 20%;
 }
+
+.hidden {
+  display: none;
+}
+
+.result-image {
+  object-fit: cover;
+  max-height: 128px;
+  max-width: 128px;
+}

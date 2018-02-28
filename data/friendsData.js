@@ -1,7 +1,7 @@
 var friendsArray = [
   {
     name: "Bill",
-    photo: "https://www.google.com",
+    photo: "http://via.placeholder.com/250",
     scores: [
       4,
       3,
@@ -18,7 +18,7 @@ var friendsArray = [
 
   {
     name: "Bob",
-    photo: "https://www.google.com",
+    photo: "http://via.placeholder.com/200",
     scores: [
       1,
       4,
@@ -35,7 +35,7 @@ var friendsArray = [
 
   {
     name: "Randy",
-    photo: "https://www.google.com",
+    photo: "http://via.placeholder.com/300",
     scores: [
       5,
       4,
