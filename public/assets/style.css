@@ -1,3 +1,7 @@
+/* body {
+  padding-bottom: 200px;
+} */
+
 .frontpage-container {
   max-width: 960px;
   margin: 0 auto;
@@ -12,4 +16,20 @@
   object-fit: cover;
   max-height: 128px;
   max-width: 128px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+}
+
+.home-footer {
+  position: fixed;
+}
+
+.hero {
+  margin-bottom: 20px;
 }

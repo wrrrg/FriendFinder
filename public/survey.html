@@ -219,6 +219,19 @@
 
 
     </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          William Gryta &copy; 2018. |
+          <a href="/api/friends"> Api Friends List </a> | 
+          <a href="https://github.com/wrrrg/FriendFinder"> Github Repo</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
     <script type="text/javascript">
 
       $("#submit").on("click", function(event) {
@@ -272,6 +285,7 @@
         $(".modal").removeClass("is-active");
       });
 
+      // if photo is invalid
       $('img').error(function(){
         $(this).attr('src', 'http://via.placeholder.com/250');
       });

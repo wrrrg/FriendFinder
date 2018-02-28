@@ -1,7 +1,7 @@
 var friendsArray = [
   {
     name: "Bill",
-    photo: "http://via.placeholder.com/250",
+    photo: "https://pixel.nymag.com/imgs/fashion/daily/2016/02/26/26-waynes-world-garth-stare.w710.h473.jpg",
     scores: [
       4,
       3,
@@ -18,7 +18,7 @@ var friendsArray = [
 
   {
     name: "Bob",
-    photo: "http://via.placeholder.com/200",
+    photo: "https://cdn.images.express.co.uk/img/dynamic/20/590x/person.gif-446881.jpg",
     scores: [
       1,
       4,
@@ -35,7 +35,7 @@ var friendsArray = [
 
   {
     name: "Randy",
-    photo: "http://via.placeholder.com/300",
+    photo: "http://4.bp.blogspot.com/_Y4Ao_KEr11k/TUQY_QUD87I/AAAAAAAAAG4/Tx4WFQ2KSYE/s1600/smallface.jpg",
     scores: [
       5,
       4,
@@ -52,23 +52,3 @@ var friendsArray = [
 ];
 
 module.exports = friendsArray;
-
-
-// Seeds
-
-// var friendsArray = [
-//   {
-//     name: "Bill",
-//     pictureUrl: "https://www.google.com",
-//     answer1: "",
-//     answer2: "",
-//     answer3: "",
-//     answer4: "",
-//     answer5: "",
-//     answer6: "",
-//     answer7: "",
-//     answer8: "",
-//     answer9: "",
-//     answer10: ""
-//   }
-// ];
